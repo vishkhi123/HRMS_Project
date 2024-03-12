@@ -11,7 +11,23 @@ import com.hrms.entities.User;
 import com.hrms.exceptions.ResourceNotFoundException;
 import com.hrms.repository.UserRepository;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.servers.Server;
+
 @SpringBootApplication
+//for swagger
+@OpenAPIDefinition(
+		info = @Info(
+				title = "HRMS OPEN API",
+				description = "HRMS OPEN API documentation"
+				),
+		servers = @Server(
+				url = "http://localhost:8080",
+				description = "HRMS OPEN API documentation"
+				
+				)
+		)
 public class HrmsApplication implements CommandLineRunner {
 	
 	@Autowired
